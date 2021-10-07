@@ -7,18 +7,16 @@
     font-family: Roboto;
     display: flex;
     width: 100%;
-    font-size: 0.9rem;
     justify-content: space-between;
     align-items: center;
-    padding:1rem 1rem;
+    padding:1rem;
     border: 1px solid #20232e;
 }
   
 .safeinput{
 width: 15rem;
-color: #5e627c;
-font-size: 1.2rem;
-padding: 0.1rem 0.5rem;
+color: #d8d8d8;
+font-size: 1rem;
 font-family: Roboto;
 background-color: #20232e;
 border: none;
@@ -80,10 +78,6 @@ h4{
     margin-bottom: 1rem;
 }
 
-h5{
-    margin-top: 0.1rem;
-    font-weight: 300;
-}
 .changecolor{    
 color: #5e627c;
 }
@@ -92,8 +86,6 @@ color: #5e627c;
 }
 .vaultdel{
     width: 2rem;
-}
-.fa-trash{font-size: 1.5rem;
 }
 .innerCard-dataR img{
     padding: 0.5rem;
