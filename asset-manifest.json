@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/tvault/static/css/main.7f4518fa.chunk.css",
-    "main.js": "/tvault/static/js/main.ae26b893.chunk.js",
-    "main.js.map": "/tvault/static/js/main.ae26b893.chunk.js.map",
+    "main.css": "/tvault/static/css/main.b2122638.chunk.css",
+    "main.js": "/tvault/static/js/main.4d10dde0.chunk.js",
+    "main.js.map": "/tvault/static/js/main.4d10dde0.chunk.js.map",
     "runtime-main.js": "/tvault/static/js/runtime-main.d014073e.js",
     "runtime-main.js.map": "/tvault/static/js/runtime-main.d014073e.js.map",
     "static/js/2.d26d97c5.chunk.js": "/tvault/static/js/2.d26d97c5.chunk.js",
     "static/js/2.d26d97c5.chunk.js.map": "/tvault/static/js/2.d26d97c5.chunk.js.map",
     "index.html": "/tvault/index.html",
-    "static/css/main.7f4518fa.chunk.css.map": "/tvault/static/css/main.7f4518fa.chunk.css.map",
+    "static/css/main.b2122638.chunk.css.map": "/tvault/static/css/main.b2122638.chunk.css.map",
     "static/js/2.d26d97c5.chunk.js.LICENSE.txt": "/tvault/static/js/2.d26d97c5.chunk.js.LICENSE.txt",
     "static/media/Banner_img.9f99e499.svg": "/tvault/static/media/Banner_img.9f99e499.svg",
     "static/media/Group12577.be276fc8.svg": "/tvault/static/media/Group12577.be276fc8.svg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.d014073e.js",
     "static/js/2.d26d97c5.chunk.js",
-    "static/css/main.7f4518fa.chunk.css",
-    "static/js/main.ae26b893.chunk.js"
+    "static/css/main.b2122638.chunk.css",
+    "static/js/main.4d10dde0.chunk.js"
   ]
 }
