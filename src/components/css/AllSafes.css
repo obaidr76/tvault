@@ -59,6 +59,9 @@ outline: none;
 #innerCardContainer{
     width: 100%;
 }
+#innerCardContainer p{
+    padding: 1rem;
+}
 .innerCard{
     margin-bottom: 0.1rem;
     display: flex;
@@ -111,7 +114,9 @@ color: #5e627c;
 .Afterfirstsafe h2{
     font-size: 1rem;
   }
-  
+.afteritems{
+width: 100%;
+}
 
 button,
 a,

@@ -41,7 +41,6 @@ const AllSafes = ({setselectID}) => {
             {todos.length !== 0 && !query && (
             <div className="Afterfirstsafe">
                 <div className="afteritems">
-
                 {todos.map((todo) => {
                     return(
                     <div id="innerCardContainer" onClick={() => setAddFolderDiv(todo.id)} className={activeDIV === todo.id? "activecheck": null}>
@@ -55,6 +54,13 @@ const AllSafes = ({setselectID}) => {
             
             )}
 
+            {filteredSafes.length === 0 && query && (
+                <div className="Afterfirstsafe">
+                    <div id="innerCardContainer">
+                        <p>No Safe Found!</p>
+                    </div>
+                </div>
+            )}
             {filteredSafes && query && (
                 <div className="Afterfirstsafe">
                 {filteredSafes.map((todo) => {
@@ -64,13 +70,6 @@ const AllSafes = ({setselectID}) => {
                         </div>
                     );
                 })}
-                </div>
-            )}
-            {filteredSafes.length === 0 && query && (
-                <div className="Afterfirstsafe">
-                    <div id="innerCardContainer">
-                        <p>No Safe Found!</p>
-                    </div>
                 </div>
             )}
 
