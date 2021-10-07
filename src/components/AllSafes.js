@@ -40,6 +40,8 @@ const AllSafes = ({setselectID}) => {
 
             {todos.length !== 0 && !query && (
             <div className="Afterfirstsafe">
+                <div className="afteritems">
+
                 {todos.map((todo) => {
                     return(
                     <div id="innerCardContainer" onClick={() => setAddFolderDiv(todo.id)} className={activeDIV === todo.id? "activecheck": null}>
@@ -47,6 +49,7 @@ const AllSafes = ({setselectID}) => {
                     </div>
                 );
             })}
+                </div>
                 <img className="AddbuttonSafe" src={addsafe} alt="logo" onClick={() => setCreateSafePopup(true)}/>
             </div>
             
