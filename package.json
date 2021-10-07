@@ -1,5 +1,6 @@
 {
   "name": "credentialsapp",
+  "homepage": "https://obaidr76.github.io/tvault",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +17,7 @@
     "react-scripts": "4.0.3",
     "react-time-ago": "^7.1.2",
     "web-vitals": "^1.1.2"
+    
   },
   "scripts": {
     "start": "react-scripts start",
