@@ -39,7 +39,7 @@ const EditSafeCard = (props) => {
   return (
           <div className="popup">
             <form onSubmit={HandleChange}>
-              <h2>Create Safe {findID}</h2>
+              <h2>Create Safe</h2>
               <div className="popup_desc">
                 <img src={icon_safe} alt="safeImage"></img>
                 <p>

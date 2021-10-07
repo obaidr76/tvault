@@ -57,7 +57,7 @@ outline: none;
     background-image: linear-gradient(to right, #72134b, #1d212c);
 }
 .innerCard-dataL{
-    margin-right: 15rem;
+    margin-right: 6rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;

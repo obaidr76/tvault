@@ -8,7 +8,6 @@ import React, {useState, Component } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import foldericon from './images/icon_folder.svg';
 
-
 const SecretSafes = ({selectID}) =>{
 
     const [EditSafePopup, setEditSafePopup] = useState(false); 

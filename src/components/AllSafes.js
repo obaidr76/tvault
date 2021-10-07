@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import './css/AllSafes.css';
 import CreateSafe from './CreateSafe';
 //import childsafecards from './childsafecards';
@@ -12,12 +12,19 @@ import { useSelector } from 'react-redux';
 
 
 const AllSafes = ({setselectID}) => {
+
     const [CreateSafePopup, setCreateSafePopup] = useState(false);//hook1 default value sets true   
     const setAddFolderDiv = (value) =>{
         setselectID(value);
     }
 
     const todos = useSelector((state) => state.todos);
+    const [query, setQuery] = useState("");
+    const ForFiltertodos = useSelector((state) => state.todos);
+    const valueregex = new RegExp(`\\b${query}`);
+    const filteredSafes = ForFiltertodos.filter((todo) => valueregex.test(todo.SafeName));
+
+    console.log(filteredSafes);
 
     return (
         <div className="allSafes">
@@ -25,7 +32,7 @@ const AllSafes = ({setselectID}) => {
                 <h2>All-Safes <span className="changecolor">({todos.length})</span></h2>
                 <i className="fa fa-caret-down" aria-hidden="true"></i>
                 <div className="searchbox">
-                    <input className="safeinput" type="text" placeholder="Search"/>
+                    <input type="text" id="searchBar" placeholder="Search" value={query} onChange={(e) => setQuery(e.currentTarget.value)} / >
                 </div>
             </div>
             {todos.length == 0 && (
@@ -36,7 +43,7 @@ const AllSafes = ({setselectID}) => {
             </div>
             )}
 
-            {todos.length !== 0 && (
+            {todos.length !== 0 && !query && (
 
             <div className="Afterfirstsafe">
                 {todos.map((todo) => {
@@ -50,6 +57,21 @@ const AllSafes = ({setselectID}) => {
             </div>
             
             )}
+
+            {filteredSafes && query && (
+                <div className="Afterfirstsafe">
+                {filteredSafes.map((todo) => {
+                        return(
+                        <div className="innerCardContainer" onClick={() => setAddFolderDiv(todo.id)}>
+                            <SafeCard id = {todo.id} Owner = {todo.Owner} Date = {todo.Date} Typeof = {todo.Typeof} SafeName = {todo.SafeName}/>   
+                        </div>
+                    );
+                })}
+                </div>
+
+            )}
+
+
             {CreateSafePopup &&(
             <CreateSafe setTrigger={setCreateSafePopup}>
                 {/* <h2>yes worked</h2> */}
