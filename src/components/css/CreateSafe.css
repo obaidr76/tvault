@@ -26,7 +26,6 @@
 form {
   opacity: 1;
   padding: 3rem;
-  height: calc(100% - 17rem);
   width: 45rem;
   background-color: #2a2e3e;
   display: flex;
@@ -93,4 +92,17 @@ button {
 button:hover{
   color: white;
   background-color:#e20074;
+}
+
+button,
+a,
+#toggleNavbar,
+.child_side_navbar_top,
+.child_side_navbar_bottom,
+.top_child_navbar_eleL p,
+th, li, h1, h2, h3, h4, h5, span,
+td, img,
+.checkbox_default,
+input {
+  cursor: pointer;
 }

@@ -33,8 +33,8 @@ const AllSafes = ({setselectID}) => {
             {todos.length == 0 && (
             <div className="firstsafe">
                 <img src={add1} alt="logo"/>
-                <h4>Create a Safe to get started</h4>
-                <img src={addsafe} alt="logo" onClick={() => setCreateSafePopup(true)}/>
+                <h4 className="safeh4">Create a Safe to get started</h4>
+                <img className="imgh4" src={addsafe} alt="logo" onClick={() => setCreateSafePopup(true)}/>
             </div>
             )}
 

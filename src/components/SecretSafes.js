@@ -82,10 +82,10 @@ const SecretSafes = ({selectID}) =>{
                             console.log(itemvalue);
                             return(
                                 <div className="foldercardparent">
-                                    <i className="fa fa-caret-right" aria-hidden="true"></i>
+                                    <i className="fa fa-caret-right fa1" aria-hidden="true"></i>
                                     <img src={foldericon} alt="logo"/>
                                     <div className="foldercard">
-                                        <h2> {itemvalue} </h2>
+                                        <h4> {itemvalue} </h4>
                                     </div>
                                 </div>
                         );
