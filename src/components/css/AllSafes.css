@@ -9,17 +9,18 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding:1rem;
+    padding:0.8rem;
     border: 1px solid #20232e;
 }
   
 .safeinput{
-width: 15rem;
+width: 12rem;
 color: #d8d8d8;
-font-size: 1rem;
+font-size: 0.8rem;
 font-family: Roboto;
 background-color: #20232e;
 border: none;
+padding: 0.5rem;
 }
 
 textarea:focus, input:focus{
@@ -73,9 +74,7 @@ outline: none;
 
 h4{
     z-index:2;
-    font-size: 0.8rem;
-    margin-top: -3rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .changecolor{    

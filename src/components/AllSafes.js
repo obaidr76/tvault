@@ -26,11 +26,9 @@ const AllSafes = ({setselectID}) => {
     return (
         <div className="allSafes">
             <div className="safesearch">                
-                <h3>All-Safes <span className="changecolor">({todos.length})</span></h3>
+                <h4>All-Safes <span className="changecolor">({todos.length})</span></h4>
                 <i className="fa fa-caret-down" aria-hidden="true"></i>
-                <div className="searchbox">
-                    <input type="text" className="safeinput" placeholder="Search" value={query} onChange={(e) => setQuery(e.currentTarget.value)} / >
-                </div>
+                <input type="text" className="safeinput" placeholder="Search" value={query} onChange={(e) => setQuery(e.currentTarget.value)} / >
             </div>
             {todos.length == 0 && (
             <div className="firstsafe">

@@ -24,7 +24,7 @@
 }
 
 .leftHead{
-  margin-right: 13rem;
+  margin-right: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,11 +32,10 @@
   font-weight: 600;
 }
 .rightHead {
-  margin-left: 13rem;
+  margin-left: 7rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-left: 2rem; */
 }
 .rightHead-1 {
   font-family: "Ardela Edge";
@@ -50,7 +49,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 5rem;
+  margin: 0 2.5rem;
 }
 
 ul {
@@ -60,7 +59,7 @@ ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 li {

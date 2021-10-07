@@ -22,14 +22,11 @@ body {
   flex-direction: column;
 }
 
-
 .content{
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   height: calc(100vh - 13.5rem);
   margin-top: 9rem;
-  width: calc(100% - 26rem);
-  margin-left: 13rem;
-  margin-right: 13rem;
+  width: calc(100% - 14rem);
+  margin-left: 7rem;
+  margin-right: 7rem;
 }
