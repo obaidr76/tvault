@@ -32,7 +32,7 @@ const AllSafes = ({setselectID}) => {
                 <h2>All-Safes <span className="changecolor">({todos.length})</span></h2>
                 <i className="fa fa-caret-down" aria-hidden="true"></i>
                 <div className="searchbox">
-                    <input type="text" id="searchBar" placeholder="Search" value={query} onChange={(e) => setQuery(e.currentTarget.value)} / >
+                    <input type="text" className="safeinput" placeholder="Search" value={query} onChange={(e) => setQuery(e.currentTarget.value)} / >
                 </div>
             </div>
             {todos.length == 0 && (
@@ -44,7 +44,6 @@ const AllSafes = ({setselectID}) => {
             )}
 
             {todos.length !== 0 && !query && (
-
             <div className="Afterfirstsafe">
                 {todos.map((todo) => {
                     return(
@@ -68,7 +67,6 @@ const AllSafes = ({setselectID}) => {
                     );
                 })}
                 </div>
-
             )}
 
 

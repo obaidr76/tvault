@@ -10,10 +10,12 @@ const EditSafeCard = (props) => {
 
   const todos = useSelector(state => state.todos);
 
-  const [inputSafeName, setSafeName] = useState("");
-  const [inputOwner, setOwner] = useState("");
-  const [inputType, setType] = useState("");
-  const [inputDesc, setDesc] = useState("");
+  const currentsafe = todos.find((todo) => todo.id === props.id);
+
+  const [inputSafeName, setSafeName] = useState([currentsafe.SafeName]);
+  const [inputOwner, setOwner] = useState([currentsafe.Owner]);
+  const [inputType, setType] = useState([currentsafe.Typeof]);
+  const [inputDesc, setDesc] = useState([currentsafe.Desc]);
 
 
   let findID = props.id;
