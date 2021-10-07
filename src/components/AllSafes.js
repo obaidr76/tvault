@@ -8,14 +8,13 @@ import shield from './images/icon_safes.svg';
 import SafeCard from './SafeCard';
 import { useSelector } from 'react-redux';
 
-
-
-
 const AllSafes = ({setselectID}) => {
 
+    const [activeDIV, setactiveDIV] = useState(false);
     const [CreateSafePopup, setCreateSafePopup] = useState(false);//hook1 default value sets true   
     const setAddFolderDiv = (value) =>{
         setselectID(value);
+        setactiveDIV(value);
     }
 
     const todos = useSelector((state) => state.todos);
@@ -23,8 +22,6 @@ const AllSafes = ({setselectID}) => {
     const ForFiltertodos = useSelector((state) => state.todos);
     const valueregex = new RegExp(`\\b${query}`);
     const filteredSafes = ForFiltertodos.filter((todo) => valueregex.test(todo.SafeName));
-
-    console.log(filteredSafes);
 
     return (
         <div className="allSafes">
@@ -47,7 +44,7 @@ const AllSafes = ({setselectID}) => {
             <div className="Afterfirstsafe">
                 {todos.map((todo) => {
                     return(
-                    <div className="innerCardContainer" onClick={() => setAddFolderDiv(todo.id)}>
+                    <div id="innerCardContainer" onClick={() => setAddFolderDiv(todo.id)} className={activeDIV === todo.id? "activecheck": null}>
                         <SafeCard id = {todo.id} Owner = {todo.Owner} Date = {todo.Date} Typeof = {todo.Typeof} SafeName = {todo.SafeName}/>   
                     </div>
                 );
@@ -61,11 +58,18 @@ const AllSafes = ({setselectID}) => {
                 <div className="Afterfirstsafe">
                 {filteredSafes.map((todo) => {
                         return(
-                        <div className="innerCardContainer" onClick={() => setAddFolderDiv(todo.id)}>
+                        <div id="innerCardContainer" onClick={() => setAddFolderDiv(todo.id)}>
                             <SafeCard id = {todo.id} Owner = {todo.Owner} Date = {todo.Date} Typeof = {todo.Typeof} SafeName = {todo.SafeName}/>   
                         </div>
                     );
                 })}
+                </div>
+            )}
+            {filteredSafes.length === 0 && query && (
+                <div className="Afterfirstsafe">
+                    <div id="innerCardContainer">
+                        <p>No Safe Found!</p>
+                    </div>
                 </div>
             )}
 

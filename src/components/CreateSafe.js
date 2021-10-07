@@ -10,14 +10,18 @@ const CreateSafe = (props) => {
 
   const [inputSafeName, setSafeName] = useState();
   const [inputOwner, setOwner] = useState();
-  const [inputType, setType] = useState();
+  const [inputType, setType] = useState("Personal");
   const [inputDesc, setDesc] = useState();
 
   const dispatch = useDispatch();
   const HandleChange = (e) =>{
     e.preventDefault();
+    if(inputDesc.length < 10) {
+      alert("Enter more characters");
+    }
+     else{ 
     dispatch(
-      addState({        
+      addState({
         SafeName: inputSafeName,
         Owner: inputOwner,
         Typeof: inputType,
@@ -26,6 +30,7 @@ const CreateSafe = (props) => {
     );
     props.setTrigger(false);
 
+  };
   };
 
 
@@ -44,11 +49,11 @@ const CreateSafe = (props) => {
         </div>
         <div className="SafeInputs">
           <label>Safe Name</label>
-          <input type="text" name="SafeName" placeholder="Cloud"  required
+          <input type="text" name="SafeName" placeholder="Set Safe Name"  required
           value={inputSafeName} onChange={(e) => setSafeName(e.target.value)} />
 
           <label>Owner</label>
-          <input type="text" name="Owner" placeholder="John Doe" required
+          <input type="text" name="Owner" placeholder="Owner: ex. John Doe" required
           value={inputOwner} onChange={(e) => setOwner(e.target.value)}  />
 
           <label>Type</label>
@@ -56,12 +61,15 @@ const CreateSafe = (props) => {
             >
             <option value="Personal" selected>Personal</option>
             <option value="Organisation">Organisation</option>
+            <option value="Corporate">Corporate</option>
+            <option value="Shared">Shared</option>
+            <option value="Associates">Associates</option>
           </select>
 
           <label>Description</label>
-          <textarea type="text" rows="4" name="Desc" placeholder="Add Some Details" required
+          <textarea type="text" rows="4" name="Desc" placeholder="Add Some Details" minlength="10" required pattern=".{10,40}"
           value={inputDesc} onChange={(e) => setDesc(e.target.value)} />
-          <p>Please add a minimum of 10 characters</p>
+          <p>Characters left: {inputDesc ? inputDesc.length < 10 ? 10-inputDesc.length: "0" : "10"}</p>
         </div>
         <div className="popupbuttons">
           <button onClick={() => props.setTrigger(false)}>Cancel</button>

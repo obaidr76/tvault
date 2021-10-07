@@ -72,8 +72,9 @@ textarea{
   padding: 1rem;
 }
 .SafeInputs p{
-  font-size: 0.6rem;
-  color: #8b8ea6;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #bbbbbb;
   margin-top: 0.3rem;
 }
 .popupbuttons {

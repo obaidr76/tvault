@@ -14,7 +14,7 @@ const EditSafeCard = (props) => {
 
   const [inputSafeName, setSafeName] = useState([currentsafe.SafeName]);
   const [inputOwner, setOwner] = useState([currentsafe.Owner]);
-  const [inputType, setType] = useState([currentsafe.Typeof]);
+  const [inputType, setType] = useState("Personal");
   const [inputDesc, setDesc] = useState([currentsafe.Desc]);
 
 
@@ -23,6 +23,10 @@ const EditSafeCard = (props) => {
   const dispatch = useDispatch();
   const HandleChange = (e) =>{
     e.preventDefault();
+    if(inputDesc.length < 10) {
+      alert("Enter more characters");
+    }
+     else{ 
     dispatch(
       EditState({
         id: findID,
@@ -33,6 +37,7 @@ const EditSafeCard = (props) => {
       })
     );
     props.setTrigger(false);
+    };
 
   };
 
@@ -57,23 +62,26 @@ const EditSafeCard = (props) => {
                 return(  */}
                   <div className="SafeInputs">                    
                     <label>Safe Name</label>
-                    <input type="text" name="SafeName" placeholder="Cloud"  required
+                    <input type="text" name="SafeName" required
                     value={inputSafeName} onChange={(e) => setSafeName(e.target.value)}/>
 
                     <label>Owner</label>
-                    <input type="text" name="Owner" placeholder="John Doe" required
+                    <input type="text" name="Owner" required
                     value={inputOwner} onChange={(e) => setOwner(e.target.value)}/>
 
                     <label>Type</label>
                     <select id="" name="Typeof" value={inputType} required onChange={(e) => setType(e.target.value)}>
                       <option value="Personal" selected>Personal</option>
                       <option value="Organisation">Organisation</option>
+                      <option value="Corporate">Corporate</option>
+                      <option value="Shared">Shared</option>
+                      <option value="Associates">Associates</option>
                     </select>
 
                     <label>Description</label>
-                    <textarea type="text" rows="4" name="Desc" placeholder="Add Some Details" required
-                    value={inputDesc} onChange={(e) => setDesc(e.target.value)}/>
-                    <p>Please add a minimum of 10 characters</p>
+                    <textarea type="text" rows="4" name="Desc" required
+                    value={inputDesc} onChange={(e) => setDesc(e.target.value)} pattern=".{10,40}"/>
+                    <p>Characters left: {inputDesc.length < 10 ? 10-inputDesc.length : "0" }</p>
                   </div>
                 
               <div className="popupbuttons">

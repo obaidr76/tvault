@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 import foldericon from './images/icon_folder.svg';
 
 const SecretSafes = ({selectID}) =>{
-
     const [EditSafePopup, setEditSafePopup] = useState(false); 
     const todos = useSelector((state) => state.todos);
     const currentsafe = todos.find((todo) => todo.id === selectID);
@@ -18,7 +17,7 @@ const SecretSafes = ({selectID}) =>{
 
         <div className="SecrectSafes">
             
-            {!selectID && (
+            {!todos.length  && (
             <div className="SafeBanner" style={{
           backgroundImage: "url(" + banner + ")",
           backgroundRepeat: "no-repeat",
@@ -29,11 +28,24 @@ const SecretSafes = ({selectID}) =>{
             </div>
 
             )}
-            {selectID && (
+            {todos.length !== 0 && !currentsafe && (
                 <div className="SafeBanner" style={{
               backgroundImage: "url(" + banner + ")",
               backgroundRepeat: "no-repeat",
-            }}><span id="safeName">Sample / SafeName</span>
+            }}><span id="safeName"> No safe selected </span>
+                <span id="safeDescription">
+                    A Safe is a logical unit to store the secrets. All the safes are
+                    created within Vault. You can control access only at the safe level.
+                    As a vault administrator you can manage safes but cannot view the
+                    content of the safe.</span>
+                </div>
+    
+            )}
+            {todos.length !== 0 && currentsafe && (
+                <div className="SafeBanner" style={{
+              backgroundImage: "url(" + banner + ")",
+              backgroundRepeat: "no-repeat",
+            }}><span id="safeName"> SafeName: {currentsafe.SafeName} </span>
                 <span id="safeDescription">
                     A Safe is a logical unit to store the secrets. All the safes are
                     created within Vault. You can control access only at the safe level.
@@ -42,7 +54,7 @@ const SecretSafes = ({selectID}) =>{
                     </span>
                 </div>
     
-                )}
+            )}
 
             <div className="DisplaySafe">
                 <div className="DisplaySafe-buttons">

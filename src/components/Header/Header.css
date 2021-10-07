@@ -87,3 +87,16 @@ li:hover{
   text-decoration: none;
   color: #ffffff;
 }
+
+button,
+a,
+#toggleNavbar,
+.child_side_navbar_top,
+.child_side_navbar_bottom,
+.top_child_navbar_eleL p,
+th,
+td,
+.checkbox_default, Link, 
+input {
+  cursor: pointer;
+}

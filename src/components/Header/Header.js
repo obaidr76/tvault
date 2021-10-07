@@ -5,7 +5,6 @@ import doc1 from '../images/doc1.png';
 import person1 from '../images/person1.png';
 import { Link } from 'react-router-dom';
 
-
 const Header = () =>{
     return (
         <div className="header">
@@ -33,5 +32,4 @@ const Header = () =>{
         </div>
     );
 };
-
 export default Header;

@@ -24,18 +24,10 @@ function App() {
               <AllSafes setselectID={setselectID}/>
               <SecretSafes selectID={selectID}/>
           </Route>
-          <Route exact path="/vaultrole">
-              <VaultRole/>
-          </Route>
-          <Route exact path="/ServiceAcc">
-              <ServiceAcc/>
-          </Route>
-          <Route exact path="/IAMServiceAcc">
-              <IAMServiceAcc/>
-          </Route>
-          <Route exact path="/AzureAD">
-              <AzureAD/>
-          </Route>
+          <Route exact path="/vaultrole" component = { VaultRole } />
+          <Route exact path="/ServiceAcc" component = { ServiceAcc } />
+          <Route exact path="/IAMServiceAcc" component = { IAMServiceAcc } />
+          <Route exact path="/AzureAD" component = { AzureAD } />
         </Switch>
       </div>
     </div>
