@@ -1,0 +1,103 @@
+.allSafes{
+    background-color: #151820;
+    width: 30%;
+    color: white;
+}
+.safesearch{
+    font-family: Roboto;
+    display: flex;
+    width: 100%;
+    font-size: 0.9rem;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 1rem;
+    border: 1px solid #20232e;
+}
+  
+.safeinput{
+width: 15rem;
+color: #5e627c;
+font-size: 1.2rem;
+padding: 0.1rem 0.5rem;
+font-family: Roboto;
+background-color: #20232e;
+border: none;
+}
+
+textarea:focus, input:focus{
+outline: none;
+}
+
+.firstsafe{
+    margin-top: 10rem;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.Afterfirstsafe{
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.innerCardContainer{
+    width: 100%;
+}
+.innerCard{
+    margin-bottom: 0.1rem;
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2a2e3e;
+}
+.innerCard:hover{
+    background-image: linear-gradient(to right, #72134b, #1d212c);
+}
+.innerCard-dataL{
+    margin-right: 15rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: left;
+    font-size: 0.8rem;  
+    font-weight: 400;  
+}
+.innerCard-dataR{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    font-size: 0.8rem;  
+    font-weight: 400;
+}
+
+h4{
+    z-index:2;
+    font-size: 0.8rem;
+    margin-top: -3rem;
+    margin-bottom: 1rem;
+}
+
+h5{
+    margin-top: 0.1rem;
+    font-weight: 300;
+}
+.changecolor{    
+color: #5e627c;
+}
+.AddbuttonSafe{
+    position: fixed; margin-top: 60vh;
+}
+.vaultdel{
+    width: 2rem;
+}
+.fa-trash{font-size: 1.5rem;
+}
+.innerCard-dataR img{
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    background-color: rgb(122, 122, 122, 0.1);
+    border-radius: 50%;
+}

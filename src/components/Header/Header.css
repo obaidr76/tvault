@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.header {
+  position: fixed;
+  box-shadow: 0 5px 25px 0 rgba(226, 0, 116, 0.5);
+  background-color: #151820;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 4.5rem;
+  z-index: 3;
+}
+
+.leftHead {
+  font-family: "Roboto", sans-serif;
+}
+
+.logo{
+  width: 2.5rem; margin-right: 1rem;
+}
+.logo2{
+  width: 1rem; margin-left: 1rem;
+}
+
+.leftHead{
+  margin-right: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+.rightHead {
+  margin-left: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 2rem; */
+}
+.rightHead-1 {
+  font-family: "Ardela Edge";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.4rem;
+}
+
+.rightHead-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5rem;
+}
+
+ul {
+  height: 4.5rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+}
+
+li {
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+  font-weight: 600;
+}
+
+li:hover{
+  height: 4.4rem;
+  background-image: linear-gradient(to top, #72134b, #1d212c);
+}
+.lH1, .lH2{
+    margin: 0 .5rem;
+}
+
+.link-CSS{
+  text-decoration: none;
+  color: #ffffff;
+}
