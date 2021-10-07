@@ -1,11 +1,10 @@
 import React, {useState, useRef} from 'react';
-import './css/AllSafes.css';
-import CreateSafe from './CreateSafe';
+import './AllSafes.css';
+import CreateSafe from '../../../modal/CreateSafe';
 //import childsafecards from './childsafecards';
-import add1 from './images/Group12687.svg';
-import addsafe from './images/Group12577.svg';
-import shield from './images/icon_safes.svg';
-import SafeCard from './SafeCard';
+import add1 from '../../../assets/images/Group12687.svg';
+import addsafe from '../../../assets/images/Group12577.svg';
+import SafeCard from '../safefolder/SafeCard';
 import { useSelector } from 'react-redux';
 
 const AllSafes = ({setselectID}) => {

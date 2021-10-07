@@ -1,12 +1,10 @@
-import './css/SecretSafes.css';
-import banner from './images/Banner_img.svg';
-import folderAddicon from './images/icon_addfolder_inactive.svg';
-import addicon from './images/icon_add.svg';
-import CreateFolder from './CreateFolder';
-import FolderCard from './FolderCard';
+import './SecretSafes.css';
+import banner from '../../../assets/images/Banner_img.svg';
+import folderAddicon from '../../../assets/images/icon_addfolder_inactive.svg';
+import CreateFolder from '../../../modal/CreateFolder';
 import React, {useState, Component } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import foldericon from './images/icon_folder.svg';
+import foldericon from '../../../assets/images/icon_folder.svg';
 
 const SecretSafes = ({selectID}) =>{
     const [EditSafePopup, setEditSafePopup] = useState(false); 

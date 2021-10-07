@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { EditState } from './redux/slice';
-import "./css/CreateSafe.css";
-import icon_safe from "./images/icon_safe.svg";
+import { EditState } from '../redux/action/slice';
+import "./CreateSafe.css";
+import icon_safe from "../assets/images/icon_safe.svg";
 import { useSelector } from 'react-redux';
 
 

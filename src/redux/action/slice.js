@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import moment from 'moment'; 
 import { act } from 'react-dom/test-utils';
-import AllSafes from '../AllSafes';
+import AllSafes from '../../pages/safe/safefolder/AllSafes';
 
 var currentDate = moment().format("DD/MM/YYYY");  
 const slice = createSlice({

@@ -1,10 +1,7 @@
 import React, { useState, Component  } from "react";
 import { useDispatch } from 'react-redux';
-
-import { EditFolderState } from './redux/slice';
-
-import "./css/CreateSafe.css";
-import icon_safe from "./images/icon_safe.svg";
+import { EditFolderState } from '../redux/action/slice';
+import "./CreateSafe.css";
 
 
 const CreateFolder = (props) => {

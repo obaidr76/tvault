@@ -1,9 +1,9 @@
 import React, { useState, Component  } from "react";
 import { useDispatch } from 'react-redux';
-import { addState } from './redux/slice';
+import { addState } from '../redux/action/slice';
 
-import "./css/CreateSafe.css";
-import icon_safe from "./images/icon_safe.svg";
+import "./CreateSafe.css";
+import icon_safe from "../assets/images/icon_safe.svg";
 
 
 const CreateSafe = (props) => {
