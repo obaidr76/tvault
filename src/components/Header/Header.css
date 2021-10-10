@@ -2,6 +2,7 @@
 
 .header {
   position: fixed;
+  padding: 0rem 7rem;
   box-shadow: 0 5px 25px 0 rgba(226, 0, 116, 0.5);
   background-color: #151820;
   color: #ffffff;
@@ -24,7 +25,6 @@
 }
 
 .leftHead{
-  margin-right: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,7 @@
   font-weight: 600;
 }
 .rightHead {
-  margin-left: 7rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,11 +49,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 2.5rem;
+  padding: 0 2.5rem;
 }
 
 ul {
-  height: 4.5rem;
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -63,20 +62,28 @@ ul {
 }
 
 li {
-  height: 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 0.5rem;
+  padding: 0 0.8rem;
   font-weight: 600;
+  overflow: hidden;
 }
 
-li:hover{
+
+
+#liactive{
   height: 4.4rem;
   background-image: linear-gradient(to top, #72134b, #1d212c);
 }
+.rightHead-list, .lihover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .lH1, .lH2{
-    margin: 0 .5rem;
+    padding: 0 .5rem;
 }
 .lH1{
   text-decoration: underline;

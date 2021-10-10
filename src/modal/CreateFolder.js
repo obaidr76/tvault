@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { EditFolderState } from '../redux/action/slice';
 import "./CreateSafe.css";
 
-
 const CreateFolder = (props) => {
   const ElementID = props.id;
   const dispatch = useDispatch();
@@ -24,20 +23,21 @@ const handleAdd = (e) => {
 };
 
   return (
-    <div className="popupFolder">
-      <form className="folderform">
-        <h2>Create Folder</h2>
-        <div className="SafeInputs">
-          <label>Folder Name</label>
-          <input type="text" name="Folder"id="name" value={secret.name} onChange={handleChange} required/>
-        </div>
-        <div className="popupbuttons">
-          <button onClick={() => props.setTrigger(false)}>Cancel</button>
-          <button type="submit" onClick={handleAdd}>+ Create</button>
-          {props.children}
-        </div>
-      </form>
-    </div>
+    
+      <div className="popupFolder">
+        <form className="folderform">
+          <h2>Create Folder</h2>
+          <div className="SafeInputs">
+            <label>Folder Name</label>
+            <input type="text" name="Folder"id="name" value={secret.name} onChange={handleChange} required/>
+          </div>
+          <div className="popupbuttons">
+            <button onClick={() => props.setTrigger(false)}>Cancel</button>
+            <button type="submit" onClick={handleAdd}>+ Create</button>
+            {props.children}
+          </div>
+        </form>
+      </div>
   );
 };
 

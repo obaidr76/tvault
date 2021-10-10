@@ -23,16 +23,15 @@ const AllSafes = ({setselectID}) => {
     const filteredSafes = ForFiltertodos.filter((todo) => valueregex.test(todo.SafeName));
 
     return (
-        <div className="allSafes">
+        <div className="allSafes" >
             <div className="safesearch">                
                 <h4>All-Safes <span className="changecolor">({todos.length})</span></h4>
                 <i className="fa fa-caret-down" aria-hidden="true"></i>
                 <input type="text" className="safeinput" placeholder="Search" value={query} onChange={(e) => setQuery(e.currentTarget.value)} / >
             </div>
             {todos.length == 0 && (
-            <div className="firstsafe">
-                <img src={add1} alt="logo"/>
-                <h4 className="safeh4">Create a Safe to get started</h4>
+            <div className="firstsafe" style={{backgroundImage: "url(" + add1 + ")", backgroundRepeat: "no-repeat", backgroundPosition: "center", }}>
+                <h4 className="safeh4" >Create a Safe to get started</h4>
                 <img className="imgh4" src={addsafe} alt="logo" onClick={() => setCreateSafePopup(true)}/>
             </div>
             )}
@@ -77,8 +76,7 @@ const AllSafes = ({setselectID}) => {
             <CreateSafe setTrigger={setCreateSafePopup}>
                 {/* <h2>yes worked</h2> */}
             </CreateSafe>
-            )}
-            
+            )}            
         </div>
     );
 
