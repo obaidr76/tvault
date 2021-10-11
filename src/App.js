@@ -20,9 +20,9 @@ function App() {
       <Header />
       <div className="content">
         <Switch>
-          <Route exact path="/"
+          <Route exact path="/tvault"
             render={() => {
-              return <Redirect to="/tvault" />;
+              return <Redirect to="/" />;
             }}>
               <AllSafes setselectID={setselectID}/>
               <SecretSafes selectID={selectID}/>
