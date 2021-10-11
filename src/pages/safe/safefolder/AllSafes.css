@@ -133,39 +133,3 @@ input {
   cursor: pointer;
 }
 
-
-#createNewBtn {
-    z-index: 2;
-    background-color: hsl(329, 69%, 39%);
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50%;
-    margin-bottom: -12rem;
-    color: white;
-    font-size: 1.5rem;
-  }
-  
-  #createNewBtn:hover {
-    cursor: pointer;
-  }
-  
-  #createNewBtn:hover .onHoverShowText {
-    cursor: pointer;
-    visibility: visible;
-    cursor: pointer;
-    position: absolute;
-  }
-  
-  #createNewBtn .onHoverShowText {
-    visibility: hidden;
-    position: absolute;
-    background: white;
-    margin-left: -4.5rem;
-    font-size: 0.8rem;
-    margin-top: 4rem;
-    color: black;
-    height: 1.7rem;
-    width: 8rem;
-    padding-top: 0.35rem;
-    font-weight: 600;
-  }

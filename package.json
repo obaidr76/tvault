@@ -3,7 +3,8 @@
   "homepage": "https://obaidr76.github.io/tvault",
   "version": "0.1.0",
   "engines": {
-    "node": "14.18.0"
+    "node": "14.18.0",
+    "npm": "6.14.15"
   },
   "private": true,
   "dependencies": {
