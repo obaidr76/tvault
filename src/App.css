@@ -12,6 +12,18 @@ body {
   background-image: linear-gradient(to top, #2f3545, #1d212c);
 }
 
+@media only screen and (max-width: 3000px) and (min-width: 2000px) {
+  html {
+      font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 4000px) and (min-width: 3001px) {
+  html {
+      font-size: 32px;
+  }
+}
+
 #root {
   height: 100%;
 }

@@ -3,7 +3,7 @@ import Header from "./components/header/Header";
 import "./App.css";
 import AllSafes from "./pages/safe/safefolder/AllSafes";
 import SecretSafes from "./pages/safe/secretfolder/SecretSafes";
-
+import { Redirect } from 'react-router';
 import VaultRole from "./pages/vaultrole/VaultRole";
 import AzureAD from "./pages/azuread/AzureAD";
 import IAMServiceAcc from "./pages/iamserviceacc/IAMServiceAcc";
@@ -20,7 +20,11 @@ function App() {
       <Header />
       <div className="content">
         <Switch>
-          <Route exact path="/">
+          <Route exact
+            path="/tvault/"
+            render={() => {
+              return <Redirect to="/Safes" />;
+            }}>
               <AllSafes setselectID={setselectID}/>
               <SecretSafes selectID={selectID}/>
           </Route>
