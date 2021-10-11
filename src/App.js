@@ -20,7 +20,7 @@ function App() {
       <Header />
       <div className="content">
         <Switch>
-          <Route path="/"
+          <Route exact path="/"
             render={() => {
               return <Redirect to="/tvault" />;
             }}>

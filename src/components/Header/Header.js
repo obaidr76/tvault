@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () =>{
     const [clickedActiveId, setClickedActiveId] = useState();
-    const linkmap =[{ id: 1, name:"Safes",path:'tvault'},
+    const linkmap =[{ id: 1, name:"Safes",path:''},
     { id: 2, name:"App VaultRoles",path:'VaultRole'},
     { id: 3, name:"Service Acc.",path:'ServiceAcc'},
     { id: 4, name:"IAM Service Acc.",path:'IAMServiceAcc'},
