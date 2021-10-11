@@ -2,6 +2,9 @@
   "name": "credentialsapp",
   "homepage": "https://obaidr76.github.io/tvault",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.18.0"
+  },
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
