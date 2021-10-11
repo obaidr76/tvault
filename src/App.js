@@ -21,9 +21,9 @@ function App() {
       <div className="content">
         <Switch>
           <Route exact
-            path="/tvault/"
+            path="/"
             render={() => {
-              return <Redirect to="/Safes" />;
+              return <Redirect to="/tvault" />;
             }}>
               <AllSafes setselectID={setselectID}/>
               <SecretSafes selectID={selectID}/>
