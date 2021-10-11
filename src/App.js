@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "./components/header/Header";
+import Header from "./components/header/header.js";
 import "./App.css";
 import AllSafes from "./pages/safe/safefolder/AllSafes";
 import SecretSafes from "./pages/safe/secretfolder/SecretSafes";
