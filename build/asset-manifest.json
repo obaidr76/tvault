@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/tvault/static/css/main.9f493d32.chunk.css",
+    "main.js": "/tvault/static/js/main.fc861292.chunk.js",
+    "main.js.map": "/tvault/static/js/main.fc861292.chunk.js.map",
+    "runtime-main.js": "/tvault/static/js/runtime-main.d014073e.js",
+    "runtime-main.js.map": "/tvault/static/js/runtime-main.d014073e.js.map",
+    "static/js/2.6eaf81e2.chunk.js": "/tvault/static/js/2.6eaf81e2.chunk.js",
+    "static/js/2.6eaf81e2.chunk.js.map": "/tvault/static/js/2.6eaf81e2.chunk.js.map",
+    "index.html": "/tvault/index.html",
+    "static/css/main.9f493d32.chunk.css.map": "/tvault/static/css/main.9f493d32.chunk.css.map",
+    "static/js/2.6eaf81e2.chunk.js.LICENSE.txt": "/tvault/static/js/2.6eaf81e2.chunk.js.LICENSE.txt",
+    "static/media/Banner_img.9f99e499.svg": "/tvault/static/media/Banner_img.9f99e499.svg",
+    "static/media/Group12577.be276fc8.svg": "/tvault/static/media/Group12577.be276fc8.svg",
+    "static/media/Group12687.9e39c7aa.svg": "/tvault/static/media/Group12687.9e39c7aa.svg",
+    "static/media/icon_addfolder_inactive.38580348.svg": "/tvault/static/media/icon_addfolder_inactive.38580348.svg",
+    "static/media/icon_delete_inactive.2079621e.svg": "/tvault/static/media/icon_delete_inactive.2079621e.svg",
+    "static/media/icon_edit_active.580259f4.svg": "/tvault/static/media/icon_edit_active.580259f4.svg",
+    "static/media/icon_folder.67131354.svg": "/tvault/static/media/icon_folder.67131354.svg",
+    "static/media/icon_safe.f55db50d.svg": "/tvault/static/media/icon_safe.f55db50d.svg",
+    "static/media/icon_safes.b519504f.svg": "/tvault/static/media/icon_safes.b519504f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d014073e.js",
+    "static/js/2.6eaf81e2.chunk.js",
+    "static/css/main.9f493d32.chunk.css",
+    "static/js/main.fc861292.chunk.js"
+  ]
+}
