@@ -20,7 +20,9 @@ const SafeCard = ({id, Owner,  Date, Typeof, SafeName }) => {
             <div className="innerCard-dataL-parent">
             <img src={shield} alt="logo"/>
                 <div className="innerCard-dataL">
+                    <div className="innerCard-dataL-child">
                     <h2> {Owner} / {SafeName}</h2>
+                    </div>
                     <h5>Last Updated: {Date}</h5>
                 </div>
             </div>

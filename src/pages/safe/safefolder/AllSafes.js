@@ -29,7 +29,7 @@ const AllSafes = ({setselectID}) => {
                 <i className="fa fa-caret-down" aria-hidden="true"></i>
                 <input type="text" className="safeinput" placeholder="Search" value={query} onChange={(e) => setQuery(e.currentTarget.value)} / >
             </div>
-            {todos.length == 0 && (
+            {todos.length == 0 && !query && (
             <div className="firstsafe" style={{backgroundImage: "url(" + add1 + ")", backgroundRepeat: "no-repeat", backgroundPosition: "center", }}>
                 <h4 className="safeh4" >Create a Safe to get started</h4>
                 <img className="imgh4" src={addsafe} alt="logo" onClick={() => setCreateSafePopup(true)}/>
@@ -53,14 +53,14 @@ const AllSafes = ({setselectID}) => {
             )}
 
             {filteredSafes.length === 0 && query && (
-                <div className="Afterfirstsafe">
+                <div className="Afterfirstsafe2">
                     <div id="innerCardContainer">
                         <p>No Safe Found!</p>
                     </div>
                 </div>
             )}
             {filteredSafes && query && (
-                <div className="Afterfirstsafe">
+                <div className="Afterfirstsafe2">
                 {filteredSafes.map((todo) => {
                         return(
                         <div id="innerCardContainer" onClick={() => setAddFolderDiv(todo.id)}>

@@ -4,17 +4,21 @@ import logo from '../../assets/images/logo.png';
 import doc1 from '../../assets/images/doc1.png';
 import person1 from '../../assets/images/person1.png';
 import { Link } from 'react-router-dom';
+import {useLocation} from "react-router-dom";
+
 
 const Header = () =>{
-    const [clickedActiveId, setClickedActiveId] = useState();
-    const linkmap =[{ id: 1, name:"Safes",path:'tvault'},
-    { id: 2, name:"App VaultRoles",path:'VaultRole'},
-    { id: 3, name:"Service Acc.",path:'ServiceAcc'},
-    { id: 4, name:"IAM Service Acc.",path:'IAMServiceAcc'},
-    { id: 5, name:"Azure AD",path:'AzureAD'}];
-    const handleClick = (id) => {
-        setClickedActiveId(id);
-      };
+    const navpath = useLocation().pathname.substr(1,);
+    //let query = new URLSearchParams(useLocation().search);
+
+    //console.log(navpath);
+
+    const linkmap =[{name:"Safes",path:'tvault'},
+    {name:"App VaultRoles",path:'VaultRole'},
+    {name:"Service Acc.",path:'ServiceAcc'},
+    {name:"IAM Service Acc.",path:'IAMServiceAcc'},
+    {name:"Azure AD",path:'AzureAD'}];
+
     return (
         <header>
             <div className="rightHead">
@@ -25,9 +29,8 @@ const Header = () =>{
                 <div className="rightHead-2">
                     <ul className="rightHead-list">
                 {linkmap.map((item) => {
-                    console.log(item);
                     return (
-                            <div className="lihover" onClick={() => handleClick(item.id)} id={clickedActiveId == item.id ? "liactive" : null} key={item.id}>
+                            <div className="lihover" id={navpath === item.path ? "liactive" : null} key={item.path}>
                             <Link className="link-CSS" to ={`/${item.path}?name=obaid&age=10`}><li className="link-CSS">{item.name}</li></Link>
                             </div>
                     

@@ -77,7 +77,6 @@ const SecretSafes = ({selectID}) =>{
                     {secrets && (
                     <div className="folderContainer">                        
                         {secrets.map((itemvalue) => {
-                            console.log(itemvalue);
                             return(
                                 <div className="foldercardparent">
                                     <i className="fa fa-caret-right fa1" aria-hidden="true"></i>
