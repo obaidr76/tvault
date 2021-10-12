@@ -75,6 +75,17 @@ outline: none;
 .activecheck{
     background-image: linear-gradient(to right, #72134b, #1d212c);
 }
+.innerCard-dataL-parent{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: left;
+
+}
+
+.innerCard-dataL-parent img{
+    margin-right: 1rem;
+}
 .innerCard-dataL{
     margin-right: 6rem;
     display: flex;
@@ -111,6 +122,7 @@ color: #5e627c;
     margin-left: 0.5rem;
     background-color: rgb(122, 122, 122, 0.1);
     border-radius: 50%;
+    border: 1px solid rgb(59, 59, 59);
 }
 
 .Afterfirstsafe h2{

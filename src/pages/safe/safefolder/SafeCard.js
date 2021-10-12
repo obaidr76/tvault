@@ -17,10 +17,12 @@ const SafeCard = ({id, Owner,  Date, Typeof, SafeName }) => {
 
     return(
         <div key={id} className="innerCard">
+            <div className="innerCard-dataL-parent">
             <img src={shield} alt="logo"/>
-            <div className="innerCard-dataL">
-                <h2> {Owner} / {SafeName}</h2>
-                <h5>Last Updated: {Date}</h5>
+                <div className="innerCard-dataL">
+                    <h2> {Owner} / {SafeName}</h2>
+                    <h5>Last Updated: {Date}</h5>
+                </div>
             </div>
             <div className="innerCard-dataR">
                 <img src={icon_edit_active} alt="logo" onClick={() => setEditSafePopup(true)}/>

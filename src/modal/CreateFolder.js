@@ -2,6 +2,7 @@ import React, { useState, Component  } from "react";
 import { useDispatch } from 'react-redux';
 import { EditFolderState } from '../redux/action/slice';
 import "./CreateSafe.css";
+import OutsideClickHandler from "react-outside-click-handler";
 
 const CreateFolder = (props) => {
   const ElementID = props.id;
@@ -25,6 +26,11 @@ const handleAdd = (e) => {
   return (
     
       <div className="popupFolder">
+      <OutsideClickHandler
+        onOutsideClick={() => {
+          props.setTrigger(false);
+        }}
+      >
         <form className="folderform">
           <h2>Create Folder</h2>
           <div className="SafeInputs">
@@ -37,6 +43,7 @@ const handleAdd = (e) => {
             {props.children}
           </div>
         </form>
+      </OutsideClickHandler>
       </div>
   );
 };

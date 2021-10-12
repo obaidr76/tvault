@@ -4,6 +4,7 @@ import { EditState } from '../redux/action/slice';
 import "./CreateSafe.css";
 import icon_safe from "../assets/images/icon_safe.svg";
 import { useSelector } from 'react-redux';
+import OutsideClickHandler from "react-outside-click-handler";
 
 
 const EditSafeCard = (props) => {
@@ -45,6 +46,12 @@ const EditSafeCard = (props) => {
 
   return (
           <div className="popup">
+            
+      <OutsideClickHandler
+        onOutsideClick={() => {
+          props.setTrigger(false);
+        }}
+      >
             <form onSubmit={HandleChange}>
               <h2>Create Safe</h2>
               <div className="popup_desc">
@@ -81,7 +88,7 @@ const EditSafeCard = (props) => {
                     <label>Description</label>
                     <textarea type="text" rows="4" name="Desc" required
                     value={inputDesc} onChange={(e) => setDesc(e.target.value)} pattern=".{10,40}"/>
-                    <p>Characters left: {inputDesc.length < 10 ? 10-inputDesc.length : "0" }</p>
+                    <p>Please input atleast 10 Characters.</p>
                   </div>
                 
               <div className="popupbuttons">
@@ -90,6 +97,8 @@ const EditSafeCard = (props) => {
                 {props.children}
               </div>
             </form>
+            
+      </OutsideClickHandler>
     </div>
   );
   };    

@@ -1,6 +1,7 @@
 import React, { useState, Component  } from "react";
 import { useDispatch } from 'react-redux';
 import { addState } from '../redux/action/slice';
+import OutsideClickHandler from "react-outside-click-handler";
 
 import "./CreateSafe.css";
 import icon_safe from "../assets/images/icon_safe.svg";
@@ -36,6 +37,11 @@ const CreateSafe = (props) => {
 
   return (
     <div className="popup">
+      <OutsideClickHandler
+        onOutsideClick={() => {
+          props.setTrigger(false);
+        }}
+      >
       <form onSubmit={HandleChange}>
         <h2>Create Safe</h2>
         <div className="popup_desc">
@@ -69,7 +75,7 @@ const CreateSafe = (props) => {
           <label>Description</label>
           <textarea type="text" rows="4" name="Desc" placeholder="Add Some Details" minlength="10" required pattern=".{10,40}"
           value={inputDesc} onChange={(e) => setDesc(e.target.value)} />
-          <p>Characters left: {inputDesc ? inputDesc.length < 10 ? 10-inputDesc.length: "0" : "10"}</p>
+          <p>Minimum Characters left to input: {inputDesc ? inputDesc.length < 10 ? 10-inputDesc.length: "" : "10"}</p>
         </div>
         <div className="popupbuttons">
           <button onClick={() => props.setTrigger(false)}>Cancel</button>
@@ -77,6 +83,7 @@ const CreateSafe = (props) => {
           {props.children}
         </div>
       </form>
+      </OutsideClickHandler>
     </div>
   );
 };

@@ -25,7 +25,7 @@
 }
 form {
   opacity: 1;
-  padding: 3rem;
+  padding: 2rem;
   width: 45rem;
   background-color: #2a2e3e;
   display: flex;
@@ -76,7 +76,7 @@ textarea{
 }
 .popupbuttons {
   display: flex;
-  margin-top: 1rem;
+  padding-top: 1.5rem;
   justify-content: flex-end;
 }
   

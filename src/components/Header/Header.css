@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-.header {
+header {
   position: fixed;
   padding: 0rem 7rem;
   box-shadow: 0 5px 25px 0 rgba(226, 0, 116, 0.5);

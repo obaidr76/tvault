@@ -16,7 +16,7 @@ const Header = () =>{
         setClickedActiveId(id);
       };
     return (
-        <div className="header">
+        <header>
             <div className="rightHead">
                 <div className="rightHead-1">
                     <img src={logo} className="logo" alt="logo"/>
@@ -42,7 +42,7 @@ const Header = () =>{
                     <img src={person1} className="logo2" alt="logo"/>
                 <div className="lH2">(Admin) Davis R.</div>
             </div>
-        </div>
+        </header>
     );
 };
 export default Header;
